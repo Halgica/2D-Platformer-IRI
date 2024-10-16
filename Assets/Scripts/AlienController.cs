@@ -26,6 +26,7 @@ public class AlienController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            Debug.Log("LUDA PROMJENA RIGHT HERE");
         }
     }
 
