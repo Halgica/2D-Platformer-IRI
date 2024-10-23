@@ -7,6 +7,7 @@ public class AlienController : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private LayerMask groundLayer; 
+    [SerializeField] private LayerMask deathLayer; 
     [SerializeField] private BoxCollider2D boxCollider;
 
     private Rigidbody2D rb;
@@ -18,15 +19,17 @@ public class AlienController : MonoBehaviour
 
     private void Update()
     {
+        DeathCheck();
+
         // Movement
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+        //rb.AddForce(new Vector2(moveInput * moveSpeed, rb.velocity.y),ForceMode2D.Force);
 
         // Jump
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            Debug.Log("LUDA PROMJENA RIGHT HERE");
         }
     }
 
@@ -34,6 +37,15 @@ public class AlienController : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, boxCollider.bounds.extents.y + 0.1f, groundLayer);
         return hit.collider != null;
+    }
+    private void DeathCheck()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, boxCollider.bounds.extents.y + 0.1f, deathLayer);
+        if (hit.collider != null)
+        {
+            Destroy(gameObject);
+            //Debug.Log("dud is dead asf");
+        }
     }
 
     private void OnDrawGizmos()
