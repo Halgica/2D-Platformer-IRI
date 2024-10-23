@@ -19,7 +19,10 @@ public class AlienController : MonoBehaviour
 
     private void Update()
     {
-        DeathCheck();
+        if(DeathCheck())
+        {
+            Destroy(gameObject);
+        }
 
         // Movement
         float moveInput = Input.GetAxis("Horizontal");
@@ -38,14 +41,10 @@ public class AlienController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, boxCollider.bounds.extents.y + 0.1f, groundLayer);
         return hit.collider != null;
     }
-    private void DeathCheck()
+    private bool DeathCheck()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, boxCollider.bounds.extents.y + 0.1f, deathLayer);
-        if (hit.collider != null)
-        {
-            Destroy(gameObject);
-            //Debug.Log("dud is dead asf");
-        }
+        return hit.collider != null;
     }
 
     private void OnDrawGizmos()
