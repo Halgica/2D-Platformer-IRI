@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class AlienController : MonoBehaviour
 {
+    [SerializeField] private Checkpoint currentCheckPoint;
+
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private LayerMask groundLayer; 
@@ -23,13 +25,12 @@ public class AlienController : MonoBehaviour
     {
         if(IsColliding(deathLayer))
         {
-            Destroy(gameObject);
+            transform.position = currentCheckPoint.GetSpawnPoint().position; 
         }
 
         // Movement
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-        //rb.AddForce(new Vector2(moveInput * moveSpeed, rb.velocity.y),ForceMode2D.Force);
 
         // Jump
         if (Input.GetKeyDown(KeyCode.Space) && IsColliding(groundLayer))
@@ -53,9 +54,20 @@ public class AlienController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Coin"))
+        switch(collision.tag)
         {
-            Destroy(collision.gameObject);
+            case "Coin":
+
+                Destroy(collision.gameObject);
+
+                break;
+            case "Checkpoint":
+
+                currentCheckPoint?.SetIndicatorColor(false);
+                currentCheckPoint = collision.GetComponent<Checkpoint>();
+                currentCheckPoint.SetIndicatorColor(true);
+
+                break;
         }
     }
 }
