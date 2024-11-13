@@ -1540,6 +1540,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e426e5f006fb8534085db281b6959416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftEdge: {fileID: 1756839770}
+  rightEdge: {fileID: 821019602}
 --- !u!50 &283535129
 Rigidbody2D:
   serializedVersion: 4
