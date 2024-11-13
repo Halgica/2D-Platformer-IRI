@@ -3,22 +3,27 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class AlienController : MonoBehaviour
 {
     [SerializeField] private Checkpoint currentCheckPoint;
+    [SerializeField] private BoxCollider2D boxCollider;
+    [SerializeField] private GameObject UI;
+    private UIManager Manager;
 
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 5f;
+    private int score = 0;
     [SerializeField] private LayerMask groundLayer; 
     [SerializeField] private LayerMask deathLayer; 
-    [SerializeField] private BoxCollider2D boxCollider;
 
     private Rigidbody2D rb;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        Manager = UI.GetComponent<UIManager>();
     }
 
     private void Update()
@@ -57,18 +62,21 @@ public class AlienController : MonoBehaviour
         switch(collision.tag)
         {
             case "Coin":
-
                 Destroy(collision.gameObject);
-
+                addScore();
                 break;
-            case "Checkpoint":
 
+            case "Checkpoint":
                 currentCheckPoint?.SetIndicatorColor(false);
                 currentCheckPoint = collision.GetComponent<Checkpoint>();
                 currentCheckPoint.SetIndicatorColor(true);
-
                 break;
         }
+    }
+    public void addScore()
+    {
+        score++;
+        Manager.updateScore(score);
     }
 }
 
