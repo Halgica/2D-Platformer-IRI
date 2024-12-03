@@ -1,23 +1,62 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 public class MeleeEnemy : MonoBehaviour
 {
     [SerializeField] private GameObject leftEdge;
     [SerializeField] private GameObject rightEdge;
+    [SerializeField] private float speed = 2f;
+    [SerializeField] private float pauseDuration = 1f;
 
     private Rigidbody2D rb;
+    private bool movingRight = true;
+    private bool isPaused = false;
 
-    // Start is called before the first frame update
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(5f, rb.velocity.y);
+        if (!isPaused)
+        {
+            Move();
+        }
+    }
+
+    private void Move()
+    {
+        if (movingRight)
+        {
+            rb.velocity = new Vector2(speed, rb.velocity.y);
+
+            if (transform.position.x >= rightEdge.transform.position.x)
+            {
+                StartCoroutine(PauseAtEdge());
+                movingRight = false;
+            }
+        }
+        
+        else
+        {
+            rb.velocity = new Vector2 (-speed, rb.velocity.y);
+
+            if (transform.position.x <= leftEdge.transform.position.x)
+            {
+                StartCoroutine(PauseAtEdge());
+                movingRight = true;
+            }
+        }
+    }
+
+    private IEnumerator PauseAtEdge()
+    {
+        isPaused = true;
+        rb.velocity = Vector2.zero;
+        yield return new WaitForSeconds(pauseDuration);
+        isPaused = false;
     }
 }
