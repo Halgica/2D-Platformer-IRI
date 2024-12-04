@@ -5,6 +5,7 @@ using UnityEngine.Scripting.APIUpdating;
 
 public class MeleeEnemy : MonoBehaviour
 {
+    [SerializeField] private GameObject enemy;
     [SerializeField] private GameObject leftEdge;
     [SerializeField] private GameObject rightEdge;
     [SerializeField] private float speed = 2f;
@@ -16,7 +17,7 @@ public class MeleeEnemy : MonoBehaviour
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = enemy.GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -33,7 +34,7 @@ public class MeleeEnemy : MonoBehaviour
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
 
-            if (transform.position.x >= rightEdge.transform.position.x)
+            if (enemy.transform.position.x >= rightEdge.transform.position.x)
             {
                 StartCoroutine(PauseAtEdge());
                 movingRight = false;
@@ -44,7 +45,7 @@ public class MeleeEnemy : MonoBehaviour
         {
             rb.velocity = new Vector2 (-speed, rb.velocity.y);
 
-            if (transform.position.x <= leftEdge.transform.position.x)
+            if (enemy.transform.position.x <= leftEdge.transform.position.x)
             {
                 StartCoroutine(PauseAtEdge());
                 movingRight = true;

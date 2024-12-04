@@ -10,6 +10,8 @@ public class AlienController : MonoBehaviour
     [SerializeField] private Checkpoint currentCheckPoint;
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private GameObject UI;
+    [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     private UIManager Manager;
 
     [SerializeField] private float moveSpeed = 5f;
@@ -30,17 +32,29 @@ public class AlienController : MonoBehaviour
     {
         if(IsColliding(deathLayer))
         {
-            transform.position = currentCheckPoint.GetSpawnPoint().position; 
+            transform.position = currentCheckPoint.GetSpawnPoint().position;
         }
 
         // Movement
         float moveInput = Input.GetAxis("Horizontal");
+
+        if (moveInput != 0)
+        {
+            spriteRenderer.flipX = moveInput < 0;
+        }
+
+        bool isGrounded = IsColliding(groundLayer);
+        animator.SetBool("IsGrounded", isGrounded);
+        float groundSpeed = isGrounded ? Mathf.Abs(moveInput * moveSpeed) : 0;
+        animator.SetFloat("Speed", groundSpeed);
+
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
         // Jump
-        if (Input.GetKeyDown(KeyCode.Space) && IsColliding(groundLayer))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            animator.SetTrigger("Jumping");
         }
     }
 
