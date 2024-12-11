@@ -7,6 +7,8 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class AlienController : MonoBehaviour
 {
+    public enum AlienState { Idle, Walk, Jump };
+
     [SerializeField] private Checkpoint currentCheckPoint;
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private GameObject UI;
@@ -19,6 +21,8 @@ public class AlienController : MonoBehaviour
     private int score = 0;
     [SerializeField] private LayerMask groundLayer; 
     [SerializeField] private LayerMask deathLayer; 
+    private AlienState curState;
+    private int STATE_HASH = Animator.StringToHash("State");
 
     private Rigidbody2D rb;
 
@@ -44,9 +48,10 @@ public class AlienController : MonoBehaviour
         }
 
         bool isGrounded = IsColliding(groundLayer);
-        animator.SetBool("IsGrounded", isGrounded);
+
+
         float groundSpeed = isGrounded ? Mathf.Abs(moveInput * moveSpeed) : 0;
-        animator.SetFloat("Speed", groundSpeed);
+        
 
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
@@ -54,8 +59,24 @@ public class AlienController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            animator.SetTrigger("Jumping");
         }
+
+        if (rb.velocity.x != 0 && isGrounded)
+        {
+            curState = AlienState.Walk;
+        }
+
+        else if (!isGrounded)
+        {
+            curState = AlienState.Jump;
+        }
+
+        else
+        { 
+            curState = AlienState.Idle;
+        }
+
+        animator.SetInteger(STATE_HASH, (int)curState);
     }
 
     private bool IsColliding(LayerMask layerMask)
