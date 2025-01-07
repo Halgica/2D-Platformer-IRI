@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coin
   - Checkpoint
+  - Endpoint
   layers:
   - Default
   - TransparentFX

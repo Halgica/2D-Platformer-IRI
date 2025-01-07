@@ -15,6 +15,7 @@ public class AlienController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
     private UIManager Manager;
+    private GameManager gameManager;
 
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 5f;
@@ -30,6 +31,7 @@ public class AlienController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         Manager = UI.GetComponent<UIManager>();
+        gameManager = FindFirstObjectByType<GameManager>();
     }
 
     private void Update()
@@ -105,6 +107,10 @@ public class AlienController : MonoBehaviour
                 currentCheckPoint?.SetIndicatorColor(false);
                 currentCheckPoint = collision.GetComponent<Checkpoint>();
                 currentCheckPoint.SetIndicatorColor(true);
+                break;
+
+            case "Endpoint":
+                collision.GetComponent<Endpoint>().LoadNextScene();
                 break;
         }
     }
