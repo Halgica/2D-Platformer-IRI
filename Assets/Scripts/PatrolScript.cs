@@ -11,6 +11,11 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField] private float speed = 2f;
     [SerializeField] private float pauseDuration = 1f;
 
+    //private List<Transform> patrolPoints; mejbi bolji nacin :3
+    //private Transform currentPatrolPoint;
+    //private Transform nextPatrolPoint;
+    //i ond ides po indeksima tih patrol pointa (vector3.Lerp)
+
     private Rigidbody2D rb;
     private bool movingRight = true;
     private bool isPaused = false;
