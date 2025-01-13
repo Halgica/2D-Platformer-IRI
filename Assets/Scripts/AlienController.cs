@@ -112,6 +112,9 @@ public class AlienController : MonoBehaviour
             case "Endpoint":
                 collision.GetComponent<Endpoint>().LoadNextScene();
                 break;
+            case "Enemy":
+                transform.position = currentCheckPoint.GetSpawnPoint().position;
+                break;
         }
     }
     public void addScore()
