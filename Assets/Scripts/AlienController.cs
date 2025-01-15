@@ -27,6 +27,8 @@ public class AlienController : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    [SerializeField] private GameObject sfxAlienDeath;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -39,6 +41,7 @@ public class AlienController : MonoBehaviour
         if(IsColliding(deathLayer))
         {
             transform.position = currentCheckPoint.GetSpawnPoint().position;
+            Instantiate(sfxAlienDeath, transform.position, Quaternion.identity);
         }
 
         // Movement

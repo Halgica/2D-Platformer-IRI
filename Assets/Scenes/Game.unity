@@ -2612,6 +2612,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 141051701475339823, guid: da1bc5fe3f9f21d4d9378feb2311086b, type: 3}
+      propertyPath: sfxAlienDeath
+      value: 
+      objectReference: {fileID: 2040081438484198300, guid: 8a001ffc696edf3458943052669fcf12, type: 3}
+    - target: {fileID: 141051701475339823, guid: da1bc5fe3f9f21d4d9378feb2311086b, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1876920653}

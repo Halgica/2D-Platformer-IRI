@@ -17,12 +17,14 @@ public class MeleeEnemy : MonoBehaviour
     //i ond ides po indeksima tih patrol pointa (vector3.Lerp)
 
     private Rigidbody2D rb;
+    private SpriteRenderer sr;
     private bool movingRight = true;
     private bool isPaused = false;
 
     void Awake()
     {
         rb = enemy.GetComponent<Rigidbody2D>();
+        sr = enemy.GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -30,6 +32,7 @@ public class MeleeEnemy : MonoBehaviour
         if (!isPaused)
         {
             Move();
+            Flip();
         }
     }
 
@@ -56,6 +59,11 @@ public class MeleeEnemy : MonoBehaviour
                 movingRight = true;
             }
         }
+    }
+
+    private void Flip()
+    {
+        sr.flipX = movingRight;
     }
 
     private IEnumerator PauseAtEdge()
