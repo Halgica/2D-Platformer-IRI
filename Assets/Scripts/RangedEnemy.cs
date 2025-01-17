@@ -39,7 +39,8 @@ public class RangedEnemy : MonoBehaviour
         if (cooldownTimer >= attackCooldown && playerInSight())
         {
             cooldownTimer = 0;
-            anim.SetTrigger("rangedAttack");
+            //anim.SetTrigger("rangedAttack");
+            RangedAttack();
         }
 
         if (enemyPatrol != null)
@@ -48,11 +49,11 @@ public class RangedEnemy : MonoBehaviour
         }
     }
 
-    private void rangedAttack()
+    private void RangedAttack()
     {
         cooldownTimer = 0;
         projectiles[findFireball()].transform.position = firepoint.position;
-        projectiles[findFireball()].GetComponent<Projectile>().activateProjectile();
+        projectiles[findFireball()].GetComponent<Projectile>().ActivateProjectile();
     }
 
     private int findFireball()

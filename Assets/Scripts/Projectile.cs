@@ -21,12 +21,12 @@ public class Projectile : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
-    public void activateProjectile()
+    public void ActivateProjectile()
     {
         lifetime = 0;
         hit = false;
         gameObject.SetActive(true);
-        boxCollider.enabled = true;
+        //boxCollider.enabled = true;
     }
 
     private void Update()
