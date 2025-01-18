@@ -26,14 +26,14 @@ public class Projectile : MonoBehaviour
         lifetime = 0;
         hit = false;
         gameObject.SetActive(true);
-        //boxCollider.enabled = true;
+        boxCollider.enabled = true;
     }
 
     private void Update()
     {
         if (hit) return;
 
-        float movementSpeed = speed * Time.deltaTime;
+        float movementSpeed = speed * Time.deltaTime * 2;
         transform.Translate(movementSpeed, 0, 0);
 
         lifetime += Time.deltaTime;
@@ -45,6 +45,7 @@ public class Projectile : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            Debug.Log("Jebi majku");
             collision.GetComponent<Health>().TakeDamage(damage);
         }
 
