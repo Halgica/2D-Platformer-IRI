@@ -7,7 +7,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class AlienController : MonoBehaviour
 {
-    public enum AlienState { Idle, Walk, Jump };
+    public enum AlienState { Idle, Walk, Jump, Fall };
 
     [SerializeField] private Checkpoint currentCheckPoint;
     [SerializeField] private BoxCollider2D boxCollider;
@@ -71,13 +71,18 @@ public class AlienController : MonoBehaviour
             curState = AlienState.Walk;
         }
 
-        else if (!isGrounded)
+        else if (!isGrounded && rb.velocity.y > 0)
         {
             curState = AlienState.Jump;
         }
 
+        else if (!isGrounded && rb.velocity.y < 0)
+        {
+            curState = AlienState.Fall;
+        }
+
         else
-        { 
+        {
             curState = AlienState.Idle;
         }
 
