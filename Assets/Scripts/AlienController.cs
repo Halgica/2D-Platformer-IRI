@@ -130,5 +130,10 @@ public class AlienController : MonoBehaviour
         score++;
         Manager.updateScore(score);
     }
+
+    public void DisableMovement()
+    {
+        this.enabled = false;
+    }
 }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
 
-public class MeleeEnemy : MonoBehaviour
+public class PatrolScript : MonoBehaviour
 {
     [SerializeField] private GameObject enemy;
     [SerializeField] private GameObject leftEdge;
@@ -18,7 +18,7 @@ public class MeleeEnemy : MonoBehaviour
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
-    private bool movingRight = true;
+    public bool movingRight = true;
     private bool isPaused = false;
 
     void Awake()
@@ -32,7 +32,6 @@ public class MeleeEnemy : MonoBehaviour
         if (!isPaused)
         {
             Move();
-            Flip();
         }
     }
 
@@ -61,16 +60,12 @@ public class MeleeEnemy : MonoBehaviour
         }
     }
 
-    private void Flip()
-    {
-        sr.flipX = movingRight;
-    }
-
     private IEnumerator PauseAtEdge()
     {
         isPaused = true;
         rb.velocity = Vector2.zero;
         yield return new WaitForSeconds(pauseDuration);
+        sr.flipX = movingRight;
         isPaused = false;
     }
 }

@@ -15,28 +15,31 @@ public class RangedEnemy : MonoBehaviour
 
     [Header("Ranged attack")]
     [SerializeField] private Transform firepoint;
+    private Vector3 projectileFirePoint;
     [SerializeField] private GameObject[] projectiles;
 
     [Header("Collider parameters")]
     [SerializeField] private float colliderDistance;
     [SerializeField] private BoxCollider2D boxCollider;
+    private bool direction;
 
-    //references
+    
     private Animator anim;
     // MeleeEnemy is the patrol script im just restarted
-    private MeleeEnemy enemyPatrol;
+    private PatrolScript enemyPatrol;
 
     void Awake()
     {
         anim = GetComponent<Animator>();
-        enemyPatrol = GetComponentInParent<MeleeEnemy>();
+        enemyPatrol = GetComponentInParent<PatrolScript>();
+        direction = enemyPatrol.movingRight;
     }
 
     void Update()
     {
         cooldownTimer += Time.deltaTime;
 
-        if (cooldownTimer >= attackCooldown && playerInSight())
+        if (cooldownTimer >= attackCooldown && PlayerInSight())
         {
             cooldownTimer = 0;
             //anim.SetTrigger("rangedAttack");
@@ -45,18 +48,25 @@ public class RangedEnemy : MonoBehaviour
 
         if (enemyPatrol != null)
         {
-            enemyPatrol.enabled = !playerInSight();
+            enemyPatrol.enabled = !PlayerInSight();
         }
     }
 
     private void RangedAttack()
     {
+        // imma kms bro
+        if (direction)
+            projectileFirePoint = firepoint.position + new Vector3(0.7f, 0);
+        else
+            projectileFirePoint = firepoint.position + new Vector3(-0.7f, 0);
+
         cooldownTimer = 0;
-        projectiles[findFireball()].transform.position = firepoint.position;
-        projectiles[findFireball()].GetComponent<Projectile>().ActivateProjectile();
+        // Find inactive projectile in array and shoot it
+        projectiles[FindFireball()].transform.position = firepoint.position;
+        projectiles[FindFireball()].GetComponent<Projectile>().ActivateProjectile();
     }
 
-    private int findFireball()
+    private int FindFireball()
     {
         for (int i = 0; i < projectiles.Length; i++)
         {
@@ -66,9 +76,9 @@ public class RangedEnemy : MonoBehaviour
         return 0;
     }
 
-    private bool playerInSight()
+    private bool PlayerInSight()
     {
-        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
+        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + SetDirection() * range * transform.localScale.x * colliderDistance,
         new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z)
         , 0, Vector2.left, 0, playerLayer);
 
@@ -78,7 +88,18 @@ public class RangedEnemy : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
+        Gizmos.DrawWireCube(boxCollider.bounds.center + SetDirection() * range * transform.localScale.x * colliderDistance,
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
+    }
+
+    private Vector3 SetDirection()
+    {
+        direction = enemyPatrol.movingRight;
+        if (direction)
+        {
+            return transform.right;
+        }
+        else
+            return -transform.right;
     }
 }

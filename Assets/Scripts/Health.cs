@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
     private int health;
     [SerializeField] private int maxHealth;
+    [SerializeField] private Animator playerAnimator;
 
     private void Awake()
     {
@@ -14,6 +15,11 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        
+        if (health <= 0)
+        {
+            playerAnimator.SetTrigger("Death");
+        }
     }
     
 }

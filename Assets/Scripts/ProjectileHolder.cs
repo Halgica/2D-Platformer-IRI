@@ -9,6 +9,6 @@ public class ProjectileHolder : MonoBehaviour
     private void Update()
     {
         transform.localScale = enemy.localScale * 0.5f;
-        transform.position = enemy.position + new Vector3(0.5f,0f);
+        transform.position = enemy.position;
     }
 }
