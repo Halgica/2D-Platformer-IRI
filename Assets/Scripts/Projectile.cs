@@ -45,7 +45,6 @@ public class Projectile : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Jebi majku");
             collision.GetComponent<Health>().TakeDamage(damage);
         }
 

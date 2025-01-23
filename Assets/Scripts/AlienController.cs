@@ -10,8 +10,7 @@ public class AlienController : MonoBehaviour
     public enum AlienState { Idle, Walk, Jump, Fall };
 
     [SerializeField] private Checkpoint currentCheckPoint;
-    [SerializeField] private BoxCollider2D boxCollider;
-    [SerializeField] private GameObject UI;
+    [SerializeField] private BoxCollider2D playerBoxCollider;
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
     private UIManager Manager;
@@ -32,7 +31,7 @@ public class AlienController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        Manager = UI.GetComponent<UIManager>();
+        Manager = FindFirstObjectByType<UIManager>();
         gameManager = FindFirstObjectByType<GameManager>();
     }
 
@@ -91,7 +90,7 @@ public class AlienController : MonoBehaviour
 
     private bool IsColliding(LayerMask layerMask)
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, boxCollider.bounds.extents.y + 0.1f, layerMask);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, playerBoxCollider.bounds.extents.y + 0.1f, layerMask);
         return hit.collider != null;
     }
 
@@ -99,7 +98,7 @@ public class AlienController : MonoBehaviour
     {
         // Visualize the ground detection ray in the editor
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, transform.position + Vector3.down * (boxCollider.bounds.extents.y + 0.1f));
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.down * (playerBoxCollider.bounds.extents.y + 0.1f));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -111,24 +110,21 @@ public class AlienController : MonoBehaviour
                 addScore();
                 break;
 
-            case "Checkpoint":
-                currentCheckPoint?.SetIndicatorColor(false);
-                currentCheckPoint = collision.GetComponent<Checkpoint>();
-                currentCheckPoint.SetIndicatorColor(true);
-                break;
+            //case "Checkpoint":
+            //    currentCheckPoint?.SetIndicatorColor(false);
+            //    currentCheckPoint = collision.GetComponent<Checkpoint>();
+            //    currentCheckPoint.SetIndicatorColor(true);
+            //    break;
 
-            case "Endpoint":
-                collision.GetComponent<Endpoint>().LoadNextScene();
-                break;
-            case "Enemy":
-                transform.position = currentCheckPoint.GetSpawnPoint().position;
-                break;
+            //case "Endpoint":
+            //    collision.GetComponent<Endpoint>().LoadNextScene();
+            //    break;
         }
     }
     public void addScore()
     {
         score++;
-        Manager.updateScore(score);
+        Manager.UpdateScore(score);
     }
 
     public void DisableMovement()

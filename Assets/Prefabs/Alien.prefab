@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5480906713775290455}
   - component: {fileID: 6658247861942437654}
-  - component: {fileID: 141051701475339823}
   - component: {fileID: 1955598826428032832}
   - component: {fileID: 6150753971214112052}
   - component: {fileID: 7882144691466471826}
   - component: {fileID: 103502486636728672}
+  - component: {fileID: 141051701475339823}
+  - component: {fileID: 3134523446452989051}
   m_Layer: 3
   m_Name: Alien
   m_TagString: Player
@@ -89,32 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &141051701475339823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2522258063199057754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b109e748b7a82f94bbcdee43c577b836, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentCheckPoint: {fileID: 0}
-  boxCollider: {fileID: 6150753971214112052}
-  UI: {fileID: 0}
-  animator: {fileID: 0}
-  spriteRenderer: {fileID: 0}
-  moveSpeed: 5
-  jumpForce: 7
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  deathLayer:
-    serializedVersion: 2
-    m_Bits: 1024
-  sfxAlienDeath: {fileID: 0}
 --- !u!50 &1955598826428032832
 Rigidbody2D:
   serializedVersion: 4
@@ -222,3 +197,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   playerAnimator: {fileID: 7882144691466471826}
+  playerRB: {fileID: 1955598826428032832}
+  playerCollider: {fileID: 6150753971214112052}
+--- !u!114 &141051701475339823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2522258063199057754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b109e748b7a82f94bbcdee43c577b836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCheckPoint: {fileID: 0}
+  playerBoxCollider: {fileID: 0}
+  animator: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  moveSpeed: 5
+  jumpForce: 7
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  deathLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  sfxAlienDeath: {fileID: 0}
+--- !u!114 &3134523446452989051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2522258063199057754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbaeb847e5e55948bca68de68d9293a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerBoxCollider: {fileID: 6150753971214112052}
+  playerRenderer: {fileID: 6658247861942437654}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  range: 2
+  colliderDistance: -0.3
