@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
-public class AlienController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public enum AlienState { Idle, Walk, Jump, Fall };
 
