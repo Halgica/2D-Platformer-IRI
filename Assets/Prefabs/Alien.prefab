@@ -212,9 +212,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCheckPoint: {fileID: 0}
-  playerBoxCollider: {fileID: 0}
-  animator: {fileID: 0}
-  spriteRenderer: {fileID: 0}
+  playerBoxCollider: {fileID: 6150753971214112052}
+  animator: {fileID: 7882144691466471826}
+  spriteRenderer: {fileID: 6658247861942437654}
   moveSpeed: 5
   jumpForce: 7
   groundLayer:
@@ -223,7 +223,7 @@ MonoBehaviour:
   deathLayer:
     serializedVersion: 2
     m_Bits: 1024
-  sfxAlienDeath: {fileID: 0}
+  sfxAlienDeath: {fileID: 2040081438484198300, guid: 8a001ffc696edf3458943052669fcf12, type: 3}
 --- !u!114 &3134523446452989051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBoxCollider: {fileID: 6150753971214112052}
   playerRenderer: {fileID: 6658247861942437654}
+  playerAnimator: {fileID: 7882144691466471826}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128

@@ -12515,21 +12515,6 @@ Transform:
   - {fileID: 1555471041}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1876920653 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 6658247861942437654, guid: da1bc5fe3f9f21d4d9378feb2311086b, type: 3}
-  m_PrefabInstance: {fileID: 3721642497132687978}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1876920654 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7882144691466471826, guid: da1bc5fe3f9f21d4d9378feb2311086b, type: 3}
-  m_PrefabInstance: {fileID: 3721642497132687978}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1876920656 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 6150753971214112052, guid: da1bc5fe3f9f21d4d9378feb2311086b, type: 3}
-  m_PrefabInstance: {fileID: 3721642497132687978}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3721642497132687978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12543,29 +12528,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1711522885}
     - target: {fileID: 141051701475339823, guid: da1bc5fe3f9f21d4d9378feb2311086b, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1876920654}
-    - target: {fileID: 141051701475339823, guid: da1bc5fe3f9f21d4d9378feb2311086b, type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 141051701475339823, guid: da1bc5fe3f9f21d4d9378feb2311086b, type: 3}
-      propertyPath: sfxAlienDeath
-      value: 
-      objectReference: {fileID: 2040081438484198300, guid: 8a001ffc696edf3458943052669fcf12, type: 3}
-    - target: {fileID: 141051701475339823, guid: da1bc5fe3f9f21d4d9378feb2311086b, type: 3}
-      propertyPath: spriteRenderer
-      value: 
-      objectReference: {fileID: 1876920653}
-    - target: {fileID: 141051701475339823, guid: da1bc5fe3f9f21d4d9378feb2311086b, type: 3}
       propertyPath: currentSpawnPoint
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 141051701475339823, guid: da1bc5fe3f9f21d4d9378feb2311086b, type: 3}
-      propertyPath: playerBoxCollider
-      value: 
-      objectReference: {fileID: 1876920656}
     - target: {fileID: 2522258063199057754, guid: da1bc5fe3f9f21d4d9378feb2311086b, type: 3}
       propertyPath: m_Name
       value: Player

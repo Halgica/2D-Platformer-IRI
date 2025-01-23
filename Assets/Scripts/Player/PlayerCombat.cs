@@ -6,6 +6,7 @@ public class PlayerCombat : MonoBehaviour
 {
     [SerializeField] private BoxCollider2D playerBoxCollider;
     [SerializeField] private SpriteRenderer playerRenderer;
+    [SerializeField] private Animator playerAnimator;
     [SerializeField] private LayerMask enemyLayer;
 
     [SerializeField] private float range;
@@ -13,32 +14,22 @@ public class PlayerCombat : MonoBehaviour
 
     private void Update()
     {
-       
-    }
-
-    private bool Attack()
-    {
-        RaycastHit2D hit = Physics2D.BoxCast(playerBoxCollider.bounds.center + SetDirection() * range * transform.localScale.x * colliderDistance,
-       new Vector3(playerBoxCollider.bounds.size.x * range, playerBoxCollider.bounds.size.y, playerBoxCollider.bounds.size.z)
-       , 0, Vector2.left, 0, enemyLayer);
-
-        return hit.collider != null;
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireCube(playerBoxCollider.bounds.center + SetDirection() * range * transform.localScale.x * colliderDistance,
-            new Vector3(playerBoxCollider.bounds.size.x * range, playerBoxCollider.bounds.size.y, playerBoxCollider.bounds.size.z));
-    }
-
-    private Vector3 SetDirection()
-    {
-        if (playerRenderer.flipX)
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            return transform.right;
+            Attack();
         }
-        else
-            return -transform.right;
+    }
+
+    private void Attack()
+    {
+        playerAnimator.SetTrigger("Attack");
+        Collider2D[] Enemies = Physics2D.OverlapCircleAll(transform.position, range);
+        foreach (var hitCollider in Enemies)
+        {
+            if (hitCollider.TryGetComponent<MeleeEnemy>(out MeleeEnemy e))
+            {
+                e.TakeDamage(1);
+            }
+        }
     }
 }
