@@ -26,7 +26,7 @@ public class PlayerCombat : MonoBehaviour
         Collider2D[] Enemies = Physics2D.OverlapCircleAll(transform.position, range);
         foreach (var hitCollider in Enemies)
         {
-            if (hitCollider.TryGetComponent<MeleeEnemy>(out MeleeEnemy e))
+            if (hitCollider.TryGetComponent<Enemy>(out Enemy e))
             {
                 e.TakeDamage(1);
             }

@@ -18,6 +18,7 @@ public class PatrolScript : MonoBehaviour
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
+    private Animator enemyAnimator;
     public bool movingRight = true;
     private bool isPaused = false;
 
@@ -25,6 +26,7 @@ public class PatrolScript : MonoBehaviour
     {
         rb = enemy.GetComponent<Rigidbody2D>();
         sr = enemy.GetComponent<SpriteRenderer>();
+        enemyAnimator = enemy.GetComponent<Animator>();
     }
 
     void Update()
@@ -37,6 +39,7 @@ public class PatrolScript : MonoBehaviour
 
     private void Move()
     {
+        enemyAnimator.SetBool("IsMoving", true);
         if (movingRight)
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
@@ -62,10 +65,11 @@ public class PatrolScript : MonoBehaviour
 
     private IEnumerator PauseAtEdge()
     {
+        enemyAnimator.SetBool("IsMoving", false);
         isPaused = true;
         rb.velocity = Vector2.zero;
         yield return new WaitForSeconds(pauseDuration);
-        sr.flipX = movingRight;
+        sr.flipX = !movingRight;
         isPaused = false;
     }
 }
