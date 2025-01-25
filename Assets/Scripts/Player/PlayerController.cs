@@ -46,11 +46,11 @@ public class PlayerController : MonoBehaviour
         // Movement
         float moveInput = Input.GetAxis("Horizontal");
 
-        if (playerRigidBody.velocity.x > 0)
+        if (moveInput > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
-        else
+        else if (moveInput < 0) // why did i have to do this u ask? cuz of a unity moment
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }

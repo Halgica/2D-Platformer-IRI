@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6e06b43276cce5a4993c514c2d102cb5
+guid: 2a6e8a1ff66f2da46b606d9ebbf31685
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 8
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bullet1_strip_0
+      name: HURT_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 10
-        height: 10
+        width: 81
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7bbaf0f7e61a5f42a5b29193745900d
-      internalID: 1768185306
+      spriteID: 53d7e7c137dbc2146ab074e1e44da777
+      internalID: 1792023938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet1_strip_1
+      name: HURT_1
       rect:
         serializedVersion: 2
-        x: 10
+        x: 81
         y: 0
-        width: 10
-        height: 10
+        width: 81
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +132,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84f455673992ba946a67ec20e44942fe
-      internalID: -1197999925
+      spriteID: 7b10be65987e5d944970a55b01769cdc
+      internalID: -79744410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HURT_2
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0
+        width: 81
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e99753dfc8bfa7249973264a931a70a9
+      internalID: -841779866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HURT_3
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 0
+        width: 81
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67332f4814e760748b4936ab5c3f780a
+      internalID: 1308783946
       vertices: []
       indices: 
       edges: []
@@ -149,8 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bullet1_strip_0: 1768185306
-      bullet1_strip_1: -1197999925
+      HURT_0: 1792023938
+      HURT_1: -79744410
+      HURT_2: -841779866
+      HURT_3: 1308783946
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
