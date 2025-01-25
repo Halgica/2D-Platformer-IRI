@@ -15,6 +15,8 @@ public abstract class Enemy : MonoBehaviour
         if (enemyHealth < 0)
         {
             enemyAnimator.SetTrigger("Death");
+            Debug.Log("dead");
+            Destroy(transform.parent.gameObject);
         }
         else
         {

@@ -21,6 +21,7 @@ public class PatrolScript : MonoBehaviour
     private Animator enemyAnimator;
     public bool movingRight = true;
     private bool isPaused = false;
+    public bool isAttacking = false;
 
     void Awake()
     {
@@ -31,7 +32,7 @@ public class PatrolScript : MonoBehaviour
 
     void Update()
     {
-        if (!isPaused)
+        if (!isPaused && !isAttacking)
         {
             Move();
         }
@@ -46,8 +47,7 @@ public class PatrolScript : MonoBehaviour
 
             if (enemy.transform.position.x >= rightEdge.transform.position.x)
             {
-                StartCoroutine(PauseAtEdge());
-                movingRight = false;
+                StartCoroutine(PauseMovement());
             }
         }
         
@@ -57,18 +57,18 @@ public class PatrolScript : MonoBehaviour
 
             if (enemy.transform.position.x <= leftEdge.transform.position.x)
             {
-                StartCoroutine(PauseAtEdge());
-                movingRight = true;
+                StartCoroutine(PauseMovement());
             }
         }
     }
 
-    private IEnumerator PauseAtEdge()
+    public IEnumerator PauseMovement()
     {
         enemyAnimator.SetBool("IsMoving", false);
         isPaused = true;
         rb.velocity = Vector2.zero;
         yield return new WaitForSeconds(pauseDuration);
+        movingRight = !movingRight;
         sr.flipX = !movingRight;
         isPaused = false;
     }
