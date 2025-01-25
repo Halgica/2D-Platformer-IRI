@@ -5,22 +5,68 @@ using UnityEngine;
 
 public class MeleeEnemy : Enemy
 {
-    Vector2 impulse = new Vector2(-7, 3); // skopiro sa stack overflow ali brate moj taj x ne radi nista
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private BoxCollider2D enemyCollider;
-    [SerializeField] private PatrolScript enemyPatrol;
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private Rigidbody2D enemyRigidBody;
 
     [SerializeField] private float range;
+    [SerializeField] private float speed;
+    [SerializeField] private float stoppingDistance;
     private bool direction;
+    private bool movingRight = true;
+    private bool isAttacking = false;
+    
 
     private void Awake()
     {
-        enemyPatrol = GetComponentInParent<PatrolScript>();
+        
     }
 
     private void Update()
     {
-        DetectPlayer();
+        if (!isDead)
+        {
+            FollowPlayer();
+            DetectPlayer(); 
+        }
+        else
+        {
+            enemyRigidBody.bodyType = RigidbodyType2D.Static;
+            enemyCollider.enabled = false;
+        }
+    }
+
+    private void FollowPlayer()
+    {
+        if (playerTransform != null)
+        {
+            Vector2 direction = (playerTransform.position - transform.position).normalized;
+
+            // Check the distance to stop moving when close enough
+            float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
+            if (distanceToPlayer > stoppingDistance)
+            {
+                enemyRigidBody.velocity = new Vector2(direction.x * speed, enemyRigidBody.velocity.y);
+                enemyAnimator.SetBool("IsMoving", true);
+            }
+            else
+            {
+                enemyRigidBody.velocity = new Vector2(0, enemyRigidBody.velocity.y);
+                enemyAnimator.SetBool("IsMoving", false);
+            }
+
+            if (direction.x > 0)
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+                movingRight = true;
+            }
+            else
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+                movingRight = false;
+            }
+        }
     }
 
     private void DetectPlayer()
@@ -28,9 +74,9 @@ public class MeleeEnemy : Enemy
         // Raycast needs to change direction
         RaycastHit2D hit = Physics2D.Raycast(transform.position, SetDirection(), enemyCollider.bounds.extents.x + range, playerLayer);
 
-        if (hit.collider != null && !enemyPatrol.isAttacking)
+        if (hit.collider != null && !isAttacking)
         {
-            enemyPatrol.isAttacking = true;
+            isAttacking = true;
             enemyAnimator.SetTrigger("Attack");
         }
     }
@@ -53,12 +99,12 @@ public class MeleeEnemy : Enemy
 
     public void AttackFinished()
     {
-        enemyPatrol.isAttacking = false;
+        isAttacking = false;
     }
 
     private Vector3 SetDirection()
     {
-        direction = enemyPatrol.movingRight;
+        direction = movingRight;
         if (direction)
         {
             return transform.right;

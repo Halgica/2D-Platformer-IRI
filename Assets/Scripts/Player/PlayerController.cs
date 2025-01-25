@@ -24,13 +24,13 @@ public class PlayerController : MonoBehaviour
     private AlienState curState;
     private int STATE_HASH = Animator.StringToHash("State");
 
-    private Rigidbody2D rb;
+    private Rigidbody2D playerRigidBody;
 
     [SerializeField] private GameObject sfxAlienDeath;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        playerRigidBody = GetComponent<Rigidbody2D>();
         Manager = FindFirstObjectByType<UIManager>();
         gameManager = FindFirstObjectByType<GameManager>();
     }
@@ -46,9 +46,13 @@ public class PlayerController : MonoBehaviour
         // Movement
         float moveInput = Input.GetAxis("Horizontal");
 
-        if (moveInput != 0)
+        if (playerRigidBody.velocity.x > 0)
         {
-            spriteRenderer.flipX = moveInput < 0;
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
         }
 
         bool isGrounded = IsColliding(groundLayer);
@@ -57,25 +61,25 @@ public class PlayerController : MonoBehaviour
         float groundSpeed = isGrounded ? Mathf.Abs(moveInput * moveSpeed) : 0;
         
 
-        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+        playerRigidBody.velocity = new Vector2(moveInput * moveSpeed, playerRigidBody.velocity.y);
 
         // Jump
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, jumpForce);
         }
 
-        if (rb.velocity.x != 0 && isGrounded)
+        if (playerRigidBody.velocity.x != 0 && isGrounded)
         {
             curState = AlienState.Walk;
         }
 
-        else if (!isGrounded && rb.velocity.y > 0)
+        else if (!isGrounded && playerRigidBody.velocity.y > 0)
         {
             curState = AlienState.Jump;
         }
 
-        else if (!isGrounded && rb.velocity.y < 0)
+        else if (!isGrounded && playerRigidBody.velocity.y < 0)
         {
             curState = AlienState.Fall;
         }

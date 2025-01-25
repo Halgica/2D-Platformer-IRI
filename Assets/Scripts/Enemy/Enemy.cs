@@ -6,6 +6,7 @@ public abstract class Enemy : MonoBehaviour
 {
     [SerializeField] protected int enemyHealth;
     [SerializeField] protected int damage;
+    protected bool isDead = false;
 
     [SerializeField] protected Animator enemyAnimator;
 
@@ -14,13 +15,19 @@ public abstract class Enemy : MonoBehaviour
         enemyHealth -= damageTaken;
         if (enemyHealth < 0)
         {
+            isDead = true;
             enemyAnimator.SetTrigger("Death");
-            Debug.Log("dead");
-            Destroy(transform.parent.gameObject);
+            StartCoroutine(DestroyAfter2Seconds());
         }
         else
         {
             enemyAnimator.SetTrigger("Damaged");
         }
+    }
+
+    public IEnumerator DestroyAfter2Seconds()
+    {
+        yield return new WaitForSeconds(2);
+        Destroy(gameObject);
     }
 }

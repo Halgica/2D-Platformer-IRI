@@ -25,13 +25,16 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             playerAnimator.SetTrigger("Death");
-            playerCollider.enabled = false;
-            playerRB.bodyType = RigidbodyType2D.Static;
         }
         else
         {
             playerAnimator.SetTrigger("Damage");
         }
+    }
+
+    public void StopTime()
+    {
+        Time.timeScale = 0f;
     }
     
 }
