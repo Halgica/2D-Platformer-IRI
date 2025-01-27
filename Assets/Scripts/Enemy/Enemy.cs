@@ -11,7 +11,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected Animator enemyAnimator;
     protected Transform playerTransform;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         playerTransform = GameObject.FindWithTag("Player").transform;
     }

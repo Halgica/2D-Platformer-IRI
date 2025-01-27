@@ -8,6 +8,9 @@ TagManager:
   - Checkpoint
   - Endpoint
   - Enemy
+  - MainMenu
+  - OptionMenu
+  - ProjectileHolder
   layers:
   - Default
   - TransparentFX

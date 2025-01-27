@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private Rigidbody2D playerRB;
     [SerializeField] private BoxCollider2D playerCollider;
+    [SerializeField] private PlayerCombat playerCombat;
     private UIManager uiManager;
 
     private void Awake()
@@ -26,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
         {
             playerAnimator.SetTrigger("Death");
             playerCollider.enabled = false;
+            playerCombat.enabled = false;
             playerRB.bodyType = RigidbodyType2D.Static;
         }
         else

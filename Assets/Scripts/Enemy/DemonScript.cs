@@ -7,12 +7,19 @@ public class DemonScript : Enemy
     [SerializeField] private Rigidbody2D enemyRigidBody;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject projectilePrefab;
+    private Transform projectileHolder;
 
     [SerializeField] private float range;
     [SerializeField] private float horizontalSpeed;
     [SerializeField] private float verticalSpeed;
     [SerializeField] private float stoppingDistance;
     [SerializeField] private float attackCooldown;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        projectileHolder = GameObject.FindWithTag("ProjectileHolder").transform;
+    }
 
     void Update()
     {
@@ -73,11 +80,8 @@ public class DemonScript : Enemy
         }
     }
 
-
-
-
     public void FireProjectile()
     {
-        Instantiate(projectilePrefab, firePoint.position, firePoint.rotation, firePoint);
+        Instantiate(projectilePrefab, firePoint.position, firePoint.rotation, projectileHolder.transform);
     }
 }

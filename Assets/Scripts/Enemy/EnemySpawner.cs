@@ -53,7 +53,7 @@ public class EnemySpawner : MonoBehaviour
         } while (IsInPlayerView(spawnPosition));
 
         // Instantiate the enemy
-        Instantiate(enemy, spawnPosition, Quaternion.identity);
+        Instantiate(enemy, spawnPosition, Quaternion.identity, transform);
         spawnTimer = spawnInterval;
 
     }

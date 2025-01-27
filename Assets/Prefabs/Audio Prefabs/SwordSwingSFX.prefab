@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2040081438484198300
+--- !u!1 &354639501043886704
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5749264054004336102}
-  - component: {fileID: 6408292674127263662}
-  - component: {fileID: 2614748171712418658}
+  - component: {fileID: 627661630581654413}
+  - component: {fileID: 3040990889778803526}
+  - component: {fileID: 1284645109982968439}
   m_Layer: 0
-  m_Name: sfxAlienDeath
+  m_Name: SwordSwingSFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5749264054004336102
+--- !u!4 &627661630581654413
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2040081438484198300}
+  m_GameObject: {fileID: 354639501043886704}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2937396, y: 1.4411286, z: 0.03047094}
+  m_LocalPosition: {x: 845.8323, y: 364.8951, z: -4.4628773}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &6408292674127263662
+--- !u!82 &3040990889778803526
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2040081438484198300}
+  m_GameObject: {fileID: 354639501043886704}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -9197860434493114782, guid: 8aa8484e5fe6e204c8c618b77c8996ae, type: 2}
-  m_audioClip: {fileID: 8300000, guid: c11481effecf4a743a676f9959127b85, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e64c9265446ad2d43adc95fc67d7b8a2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -129,13 +129,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2614748171712418658
+--- !u!114 &1284645109982968439
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2040081438484198300}
+  m_GameObject: {fileID: 354639501043886704}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 715c302e49c7084479a56fa325eecaf5, type: 3}

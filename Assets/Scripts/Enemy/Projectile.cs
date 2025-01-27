@@ -10,6 +10,18 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float lifetime;
     [SerializeField] private int damage = 1;
+    protected Transform playerTransform;
+
+    void Awake()
+    {
+        playerTransform = GameObject.FindWithTag("Player").transform;
+
+        if (playerTransform.position.x > transform.position.x)
+        {
+            speed = -speed;
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+    }
 
     // Update is called once per frame
     void Update()

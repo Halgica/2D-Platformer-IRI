@@ -69,24 +69,29 @@ public class PlayerController : MonoBehaviour
             playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, jumpForce);
         }
 
-        if (playerRigidBody.velocity.x != 0 && isGrounded)
+        // State management
+        if (isGrounded)
         {
-            curState = AlienState.Walk;
+            if (playerRigidBody.velocity.x != 0)
+            {
+                curState = AlienState.Walk;  // Walk when moving horizontally
+            }
+            else
+            {
+                curState = AlienState.Idle;  // Idle when not moving horizontally
+            }
         }
-
-        else if (!isGrounded && playerRigidBody.velocity.y > 0)
-        {
-            curState = AlienState.Jump;
-        }
-
-        else if (!isGrounded && playerRigidBody.velocity.y < 0)
-        {
-            curState = AlienState.Fall;
-        }
-
         else
         {
-            curState = AlienState.Idle;
+            // If player is in the air (not grounded)
+            if (playerRigidBody.velocity.y > 0)
+            {
+                curState = AlienState.Jump;  // Jump state for upward movement
+            }
+            else if (playerRigidBody.velocity.y < 0)
+            {
+                curState = AlienState.Fall;  // Fall state for downward movement
+            }
         }
 
         animator.SetInteger(STATE_HASH, (int)curState);

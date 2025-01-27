@@ -8,6 +8,8 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private SpriteRenderer playerRenderer;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private GameObject swordSwingSFX;
+    [SerializeField] private Transform AudioContainer;
 
     [SerializeField] private float range;
     [SerializeField] private float colliderDistance;
@@ -23,6 +25,7 @@ public class PlayerCombat : MonoBehaviour
     private void Attack()
     {
         playerAnimator.SetTrigger("Attack");
+        Instantiate(swordSwingSFX, AudioContainer.position, Quaternion.identity, transform);
         Collider2D[] Enemies = Physics2D.OverlapCircleAll(transform.position, range);
         foreach (var hitCollider in Enemies)
         {
