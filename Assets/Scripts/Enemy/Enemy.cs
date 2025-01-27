@@ -9,6 +9,12 @@ public abstract class Enemy : MonoBehaviour
     protected bool isDead = false;
 
     [SerializeField] protected Animator enemyAnimator;
+    protected Transform playerTransform;
+
+    private void Awake()
+    {
+        playerTransform = GameObject.FindWithTag("Player").transform;
+    }
 
     public void TakeDamage(int damageTaken)
     {

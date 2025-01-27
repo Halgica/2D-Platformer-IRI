@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DemonScript : Enemy
 {
-    [SerializeField] private Transform playerTransform;
     [SerializeField] private Rigidbody2D enemyRigidBody;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject projectilePrefab;

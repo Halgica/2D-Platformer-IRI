@@ -7,7 +7,6 @@ public class MeleeEnemy : Enemy
 {
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private BoxCollider2D enemyCollider;
-    [SerializeField] private Transform playerTransform;
     [SerializeField] private Rigidbody2D enemyRigidBody;
 
     [SerializeField] private float range;
@@ -16,12 +15,6 @@ public class MeleeEnemy : Enemy
     private bool direction;
     private bool movingRight = true;
     private bool isAttacking = false;
-    
-
-    private void Awake()
-    {
-        
-    }
 
     private void Update()
     {

@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
         //    Destroy(Instance.gameObject);
 
         //Instance = this;
-        LoadScene("Game");
+        LoadScene("MainMenu");
     }
 
     public void LoadScene(string sceneName, string unloadSceneName = null)

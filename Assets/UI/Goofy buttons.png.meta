@@ -1,0 +1,2138 @@
+fileFormatVersion: 2
+guid: ad587ec707912b9408a752ec68163751
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blue_soft_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 537
+        width: 108
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb884d94da0223439c3946bbf076836
+      internalID: 185146846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_1
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 537
+        width: 120
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208c845dc7dbba34185ae47cf19610fe
+      internalID: -1510785668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_2
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 537
+        width: 141
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea6a8420a047f64b96ff27e293ae458
+      internalID: -2111933093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_3
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 528
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f0971f665f1fb4ba62e130e106ae59
+      internalID: 493287156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_4
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 528
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 590f1d413baae6c49bf7adfab8ae7c4e
+      internalID: -1654042452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_5
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 534
+        width: 111
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9baa783ffdab5ed408f07edc522c9a0f
+      internalID: 1306568431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_6
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 534
+        width: 120
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 644c09e2f8164a84aa0562c5727c0d86
+      internalID: -1342225060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_7
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 534
+        width: 141
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab19050833c12c6499cca7c8e26b7087
+      internalID: 1957580138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_8
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 525
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ccccd7ea01e144e9350ec615d6a906
+      internalID: 1272998535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_9
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 525
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4708fa98973ca4cb8f6942f2ee6eb6
+      internalID: -1750148239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_10
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 492
+        width: 108
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0178d038042b0f643932d4668e253211
+      internalID: 842802063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_11
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 492
+        width: 120
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5b3906d4bb1bd429757c382a90b81a
+      internalID: 147431884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_12
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 492
+        width: 141
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2d52c8ccc83a24cafbcc4dd7aa7bf2
+      internalID: 1142381598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_13
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 477
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca8e5551687cdb44a1a2c9f0b8937cc
+      internalID: -1518561528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_14
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 477
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04dcbfadc7750714ca0fa34eedc5cf0a
+      internalID: -571602690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_15
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 489
+        width: 111
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c08a20843046634fb82fc3385d4e86c
+      internalID: 1486954066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_16
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 489
+        width: 120
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a848eb242ad3c66479c7e746986a1315
+      internalID: 1475864642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_17
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 489
+        width: 141
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01bc2d2191343074397be2fe04c7d1a8
+      internalID: -1837352274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_18
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 474
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77875ff109a1aee4890b6e0014a7a833
+      internalID: -1069648038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_19
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 474
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8d62b9491f1b1469b4dcdf3dc40821
+      internalID: 2023061940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_20
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 447
+        width: 108
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a04e0d443e5cdd4ca6ec43b10e1b1bb
+      internalID: -1835089443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_21
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 447
+        width: 120
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156d50f13dd02ac47b1c15518cf5c8d3
+      internalID: -1668984827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_22
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 447
+        width: 141
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557fd4a1a233242419ceeb19f8ee9c88
+      internalID: -1402586791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_23
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 426
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd0fed3fcfbd42f458a357828cc11968
+      internalID: -75059502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_24
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 426
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0352f8234dfad4745a7082645ca52398
+      internalID: -432145288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_25
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 444
+        width: 111
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7e51731df667d48854e28526fdea88
+      internalID: 1182668127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_26
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 444
+        width: 120
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ffc83795789661478ba761dbe22c2b6
+      internalID: 424766979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_27
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 444
+        width: 141
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b687906adb6a7944fb80fc07c99e23ce
+      internalID: 2103291021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_28
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 423
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d78d3d565666940a54716639b9601a
+      internalID: -2077049828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_29
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 423
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df592dae08914e46a7b9bb40db5aad4
+      internalID: -184780987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_30
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 402
+        width: 108
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf245fbe2175372489014be8885ddf69
+      internalID: -1528773867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_31
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 402
+        width: 120
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c147a64d05e9f34c8e5e8307f400967
+      internalID: -1799190105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_32
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 402
+        width: 141
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a615259ff07b8243902edaaaff71eee
+      internalID: 1092816671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_33
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 375
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 226cbb8ab91116a45ae5e5580ec11e6e
+      internalID: -200414712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_34
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 375
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6eea27da5c2c44bb77613345b854c2
+      internalID: 1274632048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_35
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 399
+        width: 111
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780492b90527ecd41adf1215584a40de
+      internalID: 102369875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_36
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 399
+        width: 120
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f744f020ca9547547b38b5c80958d674
+      internalID: 344591620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_37
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 399
+        width: 141
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f46c87a5eb4c104f9965aba7a9e6561
+      internalID: 148425716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_38
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 372
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b91c0eb6b8b57847a580cc53c9a40a5
+      internalID: 480165775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_39
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 372
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5540ea8e2e323344790558c88e2bd927
+      internalID: 845766504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_40
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 357
+        width: 108
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e925edbade9fec45995ef6d0fddcfc4
+      internalID: 1768932526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_41
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 357
+        width: 120
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c21d7bf1450e10a418246fa121bafa2b
+      internalID: 1291360423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_42
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 324
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c161a54618e73489f93d6389b56ae9
+      internalID: -2099249767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_43
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 324
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44cfe466027c866489ac345c306f0420
+      internalID: -820423377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_44
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 354
+        width: 111
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8275c74573157c342a3e2b142c131a8b
+      internalID: 1781259679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_45
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 354
+        width: 120
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1212893786a84264e8a7d10347122101
+      internalID: 1354697143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_46
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 321
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505e23597eb32cb4c8f31ba61b74bd6c
+      internalID: 1216514635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_47
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 321
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e3d20385ddccd4783e13d71a40d0ea
+      internalID: 602013514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_48
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 312
+        width: 108
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0405f94380159ce4ea6808ee3685913a
+      internalID: 846148653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_49
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 312
+        width: 120
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5fbf9ec644890d4fbb2abe42783852d
+      internalID: 971496484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_50
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 273
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc32728f67cca940a85640eadb3310e
+      internalID: 1902150539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_51
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 273
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb544cd08dc4ac49b518f762aea876a
+      internalID: -1114892304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_52
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 309
+        width: 111
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f301c736df3df44b723de293565510
+      internalID: -560316544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_53
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 309
+        width: 120
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb687318c9eaea46ac669a40fbe6704
+      internalID: 568579404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_54
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 270
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3c471f04ffb22459ff994be65002fb
+      internalID: 459558130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_55
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 270
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f2477e5dab2504aa5d153cec8418fb
+      internalID: 683683128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_56
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 267
+        width: 108
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4459d12b8a73924580738371cb33fc7
+      internalID: 625635324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_57
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 267
+        width: 120
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f3e562a9a7d1a40ae6e207f194e223
+      internalID: 1569370528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_58
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 264
+        width: 111
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a4d409f52523a4d89301ffabc3345f
+      internalID: -2054760043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_59
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 264
+        width: 120
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d3365a100d7634a9225cc0a769b442
+      internalID: -171704219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_60
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 222
+        width: 108
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086c98c4bcf0df64aa17c26bd0a8f176
+      internalID: -1684941012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_61
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 222
+        width: 120
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c92ca6d8be5244f9ce6c1b94b81102
+      internalID: -1969098338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_62
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 222
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e6795a8e9d6524eb084110929cf103
+      internalID: -245246253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_63
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 222
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f606d1f3885a90418d30098f83eccb0
+      internalID: -1300233970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_64
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 219
+        width: 111
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10da9bd633c1485428dd9d46d2c8bb55
+      internalID: 207335673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_65
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 219
+        width: 120
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0004933fcfb46cb44b17b48f4f688982
+      internalID: -1055799060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_66
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 219
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536c0a3c100e57f45b6fd1e1686217b7
+      internalID: 2097289991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_67
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 219
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7c2664ff48c254a958d3ecff65f6e4
+      internalID: 47528753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_68
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 177
+        width: 108
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa226f07f4d5030478a679d2e89fd673
+      internalID: -1103715727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_69
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 177
+        width: 120
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f013215f59b7542a4ccd337819f5dd
+      internalID: -844692474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_70
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 171
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd851b328570d048b1654f81214a0a8
+      internalID: -1210669868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_71
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 171
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290878f95ef5ac14db1bbfb6827fd867
+      internalID: 938256718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_72
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 174
+        width: 111
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bccea408274fc846a3a9364c39ec956
+      internalID: -1120813488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_73
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 174
+        width: 120
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed723d9607364345a9614411e3700ca
+      internalID: 989662644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_74
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 168
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4d6d0090b831847abcd6b8555f6ba0
+      internalID: -551386220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_75
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 168
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526ec0d922bc5454d9211f260615fc3a
+      internalID: 1995991890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_76
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 132
+        width: 108
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9148f2f94bd5a4e4baf6e6ca9fc4c722
+      internalID: 1131070823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_77
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 132
+        width: 120
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836208866fd24534a915d4b4ce604894
+      internalID: 1963172784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_78
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 120
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9dc2e8a252d154793a99c0c4ada0c4
+      internalID: -1514145335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_79
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 120
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07facf31daddf0946aa98de70be50f49
+      internalID: -2099836701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_80
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 129
+        width: 111
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8b5d44e5085c5489a3637c59712355
+      internalID: -226032570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_81
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 129
+        width: 120
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f515a79308dfd1e42a12ed754fcf7c78
+      internalID: 1287567589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_82
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 117
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6789327463dce428ff3f3d51c7579a
+      internalID: 881661196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_83
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 117
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9efa9fa54c9462d4293b92a6cb8538dd
+      internalID: -1534673857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_84
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 87
+        width: 108
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8253557e6ecf5114cbbddce732c3e4b3
+      internalID: 618832513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_85
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 69
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc0b93aad2324104f9ed631d23ed8d4e
+      internalID: -585766648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_86
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 69
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd100153062a07941a19e7f4e316ac77
+      internalID: 181744362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_87
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 84
+        width: 111
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e446f2fa33a5bb469055e191407a9d2
+      internalID: -1306492555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_88
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 66
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 390c73965bb12d844bb6067415810c5c
+      internalID: -761013689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_89
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 66
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51bd91a4dfce1c44a303932dc75f014
+      internalID: 1273024958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_90
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 42
+        width: 108
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8067e501e4c01a4e8731c1e393dfd2c
+      internalID: -748198019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_soft_91
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 39
+        width: 111
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594c19732279e9741812d79949bb98be
+      internalID: 6934794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      blue_soft_0: 185146846
+      blue_soft_1: -1510785668
+      blue_soft_10: 842802063
+      blue_soft_11: 147431884
+      blue_soft_12: 1142381598
+      blue_soft_13: -1518561528
+      blue_soft_14: -571602690
+      blue_soft_15: 1486954066
+      blue_soft_16: 1475864642
+      blue_soft_17: -1837352274
+      blue_soft_18: -1069648038
+      blue_soft_19: 2023061940
+      blue_soft_2: -2111933093
+      blue_soft_20: -1835089443
+      blue_soft_21: -1668984827
+      blue_soft_22: -1402586791
+      blue_soft_23: -75059502
+      blue_soft_24: -432145288
+      blue_soft_25: 1182668127
+      blue_soft_26: 424766979
+      blue_soft_27: 2103291021
+      blue_soft_28: -2077049828
+      blue_soft_29: -184780987
+      blue_soft_3: 493287156
+      blue_soft_30: -1528773867
+      blue_soft_31: -1799190105
+      blue_soft_32: 1092816671
+      blue_soft_33: -200414712
+      blue_soft_34: 1274632048
+      blue_soft_35: 102369875
+      blue_soft_36: 344591620
+      blue_soft_37: 148425716
+      blue_soft_38: 480165775
+      blue_soft_39: 845766504
+      blue_soft_4: -1654042452
+      blue_soft_40: 1768932526
+      blue_soft_41: 1291360423
+      blue_soft_42: -2099249767
+      blue_soft_43: -820423377
+      blue_soft_44: 1781259679
+      blue_soft_45: 1354697143
+      blue_soft_46: 1216514635
+      blue_soft_47: 602013514
+      blue_soft_48: 846148653
+      blue_soft_49: 971496484
+      blue_soft_5: 1306568431
+      blue_soft_50: 1902150539
+      blue_soft_51: -1114892304
+      blue_soft_52: -560316544
+      blue_soft_53: 568579404
+      blue_soft_54: 459558130
+      blue_soft_55: 683683128
+      blue_soft_56: 625635324
+      blue_soft_57: 1569370528
+      blue_soft_58: -2054760043
+      blue_soft_59: -171704219
+      blue_soft_6: -1342225060
+      blue_soft_60: -1684941012
+      blue_soft_61: -1969098338
+      blue_soft_62: -245246253
+      blue_soft_63: -1300233970
+      blue_soft_64: 207335673
+      blue_soft_65: -1055799060
+      blue_soft_66: 2097289991
+      blue_soft_67: 47528753
+      blue_soft_68: -1103715727
+      blue_soft_69: -844692474
+      blue_soft_7: 1957580138
+      blue_soft_70: -1210669868
+      blue_soft_71: 938256718
+      blue_soft_72: -1120813488
+      blue_soft_73: 989662644
+      blue_soft_74: -551386220
+      blue_soft_75: 1995991890
+      blue_soft_76: 1131070823
+      blue_soft_77: 1963172784
+      blue_soft_78: -1514145335
+      blue_soft_79: -2099836701
+      blue_soft_8: 1272998535
+      blue_soft_80: -226032570
+      blue_soft_81: 1287567589
+      blue_soft_82: 881661196
+      blue_soft_83: -1534673857
+      blue_soft_84: 618832513
+      blue_soft_85: -585766648
+      blue_soft_86: 181744362
+      blue_soft_87: -1306492555
+      blue_soft_88: -761013689
+      blue_soft_89: 1273024958
+      blue_soft_9: -1750148239
+      blue_soft_90: -748198019
+      blue_soft_91: 6934794
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

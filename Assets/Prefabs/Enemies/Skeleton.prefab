@@ -179,7 +179,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   enemyCollider: {fileID: 3625780435454552976}
-  playerTransform: {fileID: 0}
   enemyRigidBody: {fileID: 8073043986230332511}
   range: 0.7
   speed: 3
