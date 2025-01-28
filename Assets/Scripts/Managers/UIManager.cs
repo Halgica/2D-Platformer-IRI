@@ -39,7 +39,7 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            scoreText.SetText("Enemies Killed: " + EnemySpawner.enemiesKilled + "Get to the alien!");
+            scoreText.SetText("Enemies Killed: " + EnemySpawner.enemiesKilled + "Get to the Skibidi!");
         }
     }
 
