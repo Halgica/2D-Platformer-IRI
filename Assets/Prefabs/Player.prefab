@@ -199,6 +199,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 7882144691466471826}
   playerRB: {fileID: 1955598826428032832}
   playerCollider: {fileID: 6150753971214112052}
+  playerCombat: {fileID: 0}
 --- !u!114 &141051701475339823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,7 +217,7 @@ MonoBehaviour:
   animator: {fileID: 7882144691466471826}
   spriteRenderer: {fileID: 6658247861942437654}
   moveSpeed: 5
-  jumpForce: 7
+  jumpForce: 12
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -242,5 +243,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  range: 2
+  swordSwingSFX: {fileID: 354639501043886704, guid: 9639b39aea6b1214aaf1815eb3024a41, type: 3}
+  AudioContainer: {fileID: 0}
+  range: 1
   colliderDistance: -0.3

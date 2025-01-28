@@ -14,11 +14,11 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Camera mainCamera;
     [SerializeField] private float safeZoneMargin = 2f;
     private GameObject[] enemiesAlive;
+    public static int enemiesKilled = 0;
 
     private void Update()
     {
         enemiesAlive = GameObject.FindGameObjectsWithTag("Enemy");
-        Debug.Log(enemiesAlive.Length);
 
         spawnTimer -= Time.deltaTime;
 

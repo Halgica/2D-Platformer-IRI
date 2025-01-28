@@ -9,8 +9,13 @@ public class GameManager : MonoBehaviour
     //public static GameManager Instance;
 
     //private AlienController alienController;
+    [SerializeField] public string[] sceneNames;
+    [SerializeField] public int counter;
+    [SerializeField] private EnemySpawner spawner;
+    [SerializeField] private GameObject endPointPrefab;
+    private bool hasSpawnedEndpoint = false;
 
-    private void Start()
+    private void Awake()
     {
         //alienController = controller;
         //if (Instance != null)
@@ -18,6 +23,15 @@ public class GameManager : MonoBehaviour
 
         //Instance = this;
         LoadScene("MainMenu");
+    }
+
+    private void Update()
+    {
+        if (EnemySpawner.enemiesKilled == 10 && !hasSpawnedEndpoint)
+        {
+            SpawnEndpoint();
+            hasSpawnedEndpoint=true;
+        }
     }
 
     public void LoadScene(string sceneName, string unloadSceneName = null)
@@ -28,14 +42,9 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
     }
 
-    public void Pause()
+    private void SpawnEndpoint()
     {
-        Time.timeScale = 0f;
-    }
-
-    public void Resume()
-    {
-        Time.timeScale = 1f;
+        Instantiate(endPointPrefab, new Vector2(6f, -1.5f), Quaternion.identity);
     }
 
     public void Quit()

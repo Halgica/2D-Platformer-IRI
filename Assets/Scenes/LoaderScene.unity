@@ -151,6 +151,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d10a5c9df7286d46b665fdc49fd14d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneNames:
+  - MainMenu
+  - Level1
+  - Level2
+  - DeathScreen
+  counter: 0
+  spawner: {fileID: 0}
+  endPointPrefab: {fileID: 1222726952186501751, guid: 86aba1bb0319b834fba3b398016ad12c, type: 3}
 --- !u!4 &1416683783
 Transform:
   m_ObjectHideFlags: 0

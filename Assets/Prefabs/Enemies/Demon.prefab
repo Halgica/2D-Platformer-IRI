@@ -228,7 +228,6 @@ MonoBehaviour:
   enemyHealth: 3
   damage: 1
   enemyAnimator: {fileID: 7629626284091514869}
-  playerTransform: {fileID: 0}
   enemyRigidBody: {fileID: 8693231435610055699}
   firePoint: {fileID: 4540139778017149061}
   projectilePrefab: {fileID: 3688638445214567151, guid: ed61f096692ebfb408457aaea13c9fba, type: 3}

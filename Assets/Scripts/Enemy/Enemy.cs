@@ -23,6 +23,7 @@ public abstract class Enemy : MonoBehaviour
         {
             isDead = true;
             enemyAnimator.SetTrigger("Death");
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
             StartCoroutine(DestroyAfter2Seconds());
         }
         else
@@ -33,6 +34,7 @@ public abstract class Enemy : MonoBehaviour
 
     public IEnumerator DestroyAfter2Seconds()
     {
+        EnemySpawner.enemiesKilled++;
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
     }

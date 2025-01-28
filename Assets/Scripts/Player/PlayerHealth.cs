@@ -11,10 +11,12 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private BoxCollider2D playerCollider;
     [SerializeField] private PlayerCombat playerCombat;
     private UIManager uiManager;
+    private GameManager gameManager;
 
     private void Awake()
     {
         health = maxHealth;
+        gameManager = FindAnyObjectByType<GameManager>();
         uiManager = FindFirstObjectByType<UIManager>();
         uiManager.UpdateHealth(health);
     }
@@ -29,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
             playerCollider.enabled = false;
             playerCombat.enabled = false;
             playerRB.bodyType = RigidbodyType2D.Static;
+            StartCoroutine(LoadDeathScreen());
         }
         else
         {
@@ -36,9 +39,11 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void StopTime()
+    public IEnumerator LoadDeathScreen()
     {
-        Time.timeScale = 0f;
+        Debug.Log("Tu sam");
+        yield return new WaitForSeconds(2);
+        gameManager.LoadScene("DeathScreen", playerAnimator.gameObject.scene.name);
     }
     
 }

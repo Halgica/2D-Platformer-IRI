@@ -18,11 +18,11 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 5f;
-    private int score = 0;
     [SerializeField] private LayerMask groundLayer; 
     [SerializeField] private LayerMask deathLayer; 
     private AlienState curState;
     private int STATE_HASH = Animator.StringToHash("State");
+    private bool isPaused = false;
 
     private Rigidbody2D playerRigidBody;
 
@@ -69,6 +69,17 @@ public class PlayerController : MonoBehaviour
             playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, jumpForce);
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+        {
+            UIManager.Pause();
+            isPaused = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
+        {
+            UIManager.Unpause();
+            isPaused = false;
+        }
+
         // State management
         if (isGrounded)
         {
@@ -108,32 +119,6 @@ public class PlayerController : MonoBehaviour
         // Visualize the ground detection ray in the editor
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * (playerBoxCollider.bounds.extents.y + 0.1f));
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        switch(collision.tag)
-        {
-            case "Coin":
-                Destroy(collision.gameObject);
-                addScore();
-                break;
-
-            //case "Checkpoint":
-            //    currentCheckPoint?.SetIndicatorColor(false);
-            //    currentCheckPoint = collision.GetComponent<Checkpoint>();
-            //    currentCheckPoint.SetIndicatorColor(true);
-            //    break;
-
-            //case "Endpoint":
-            //    collision.GetComponent<Endpoint>().LoadNextScene();
-            //    break;
-        }
-    }
-    public void addScore()
-    {
-        score++;
-        Manager.UpdateScore(score);
     }
 
     public void DisableMovement()
