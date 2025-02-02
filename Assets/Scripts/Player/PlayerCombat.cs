@@ -13,13 +13,16 @@ public class PlayerCombat : MonoBehaviour
 
     [SerializeField] private float range;
     [SerializeField] private float colliderDistance;
+    [SerializeField] private float attackCooldown;
+    private float attackTimer;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && attackTimer <= 0f)
         {
             Attack();
         }
+        attackTimer -= Time.deltaTime;
     }
 
     private void Attack()
@@ -34,5 +37,6 @@ public class PlayerCombat : MonoBehaviour
                 e.TakeDamage(1);
             }
         }
+        attackTimer = attackCooldown;
     }
 }

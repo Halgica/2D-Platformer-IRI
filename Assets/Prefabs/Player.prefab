@@ -247,3 +247,4 @@ MonoBehaviour:
   AudioContainer: {fileID: 0}
   range: 1
   colliderDistance: -0.3
+  attackCooldown: 0.5

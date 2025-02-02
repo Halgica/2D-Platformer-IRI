@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour
     //public static GameManager Instance;
 
     //private AlienController alienController;
-    [SerializeField] public string[] sceneNames;
-    [SerializeField] public int counter;
+    public string[] sceneNames;
+    public int counter;
     [SerializeField] private EnemySpawner spawner;
     [SerializeField] private GameObject endPointPrefab;
     private bool hasSpawnedEndpoint = false;

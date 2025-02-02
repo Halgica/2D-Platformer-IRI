@@ -6,12 +6,14 @@ using UnityEngine;
 public class MeleeEnemy : Enemy
 {
     [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private LayerMask groundLayer;
     [SerializeField] private BoxCollider2D enemyCollider;
     [SerializeField] private Rigidbody2D enemyRigidBody;
 
     [SerializeField] private float range;
     [SerializeField] private float speed;
     [SerializeField] private float stoppingDistance;
+    [SerializeField] private float jumpForce;
     private bool direction;
     private bool movingRight = true;
     private bool isAttacking = false;
@@ -20,8 +22,12 @@ public class MeleeEnemy : Enemy
     {
         if (!isDead)
         {
-            FollowPlayer();
-            DetectPlayer(); 
+            if (!isAttacking)
+            {
+                FollowPlayer(); 
+            }
+            DetectPlayer();
+            Jump();
         }
         else
         {
@@ -71,6 +77,16 @@ public class MeleeEnemy : Enemy
         {
             isAttacking = true;
             enemyAnimator.SetTrigger("Attack");
+        }
+    }
+
+    private void Jump()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, SetDirection(), enemyCollider.bounds.extents.x + 0.5f , groundLayer);
+
+        if (hit.collider != null)
+        {
+            enemyRigidBody.velocity = new Vector2(enemyRigidBody.velocity.x, jumpForce);
         }
     }
 
