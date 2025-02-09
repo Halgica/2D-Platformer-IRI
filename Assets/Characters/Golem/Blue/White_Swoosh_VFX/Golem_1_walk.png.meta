@@ -315,7 +315,9 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 5b98dca8e24a4de4195fbbbf530cc711, type: 3}
+      name: _Emission
     nameFileIdTable:
       Golem_1_walk_0: -341501564
       Golem_1_walk_1: 1945397933

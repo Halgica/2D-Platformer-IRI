@@ -33,14 +33,7 @@ public class UIManager : MonoBehaviour
 
     public void Update()
     {
-        if (EnemySpawner.enemiesKilled < 11) // Sob emoji
-        {
             scoreText.SetText("Enemies Killed: " + EnemySpawner.enemiesKilled); 
-        }
-        else
-        {
-            scoreText.SetText("Enemies Killed: " + EnemySpawner.enemiesKilled + "Get to the Skibidi!");
-        }
     }
 
     public void UpdateHealth(int playerHealth)

@@ -12,6 +12,7 @@ TagManager:
   - OptionMenu
   - ProjectileHolder
   - PauseMenu
+  - LevelMenu
   layers:
   - Default
   - TransparentFX
@@ -48,6 +49,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 2841547695
+    locked: 0
+  - name: Decorations
+    uniqueID: 3192208369
     locked: 0
   - name: Default
     uniqueID: 0

@@ -17,11 +17,4 @@ public class Endpoint : MonoBehaviour
     {
         gameManager.LoadScene(nextSceneName,currentSceneName);
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        LoadNextScene();
-        EnemySpawner.enemiesKilled = 0;
-        Destroy(gameObject);
-    }
 }

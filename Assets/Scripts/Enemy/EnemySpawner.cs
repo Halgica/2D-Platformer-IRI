@@ -5,6 +5,7 @@ public class EnemySpawner : MonoBehaviour
     [Header("Enemies")]
     [SerializeField] private GameObject skeletonPrefab;
     [SerializeField] private GameObject demonPrefab;
+    [SerializeField] private GameObject golemPrefab;
     [SerializeField] private int numberOfEnemies;
     [SerializeField] private float spawnInterval;
     [SerializeField] private float spawnTimer;
@@ -30,14 +31,18 @@ public class EnemySpawner : MonoBehaviour
 
     private GameObject ChooseEnemy()
     {
-        int randomValue = Random.Range(1, 10);
-        if (randomValue % 2 == 0)
+        int randomValue = Random.Range(0, 3);
+        Debug.Log(randomValue);
+        switch(randomValue)
         {
-            return skeletonPrefab;
-        }
-        else
-        {
-            return demonPrefab;
+            case 0:
+                return skeletonPrefab;
+            case 1:
+                return demonPrefab;
+            case 2:
+                return golemPrefab;
+            default:
+                return skeletonPrefab;
         }
     }
 

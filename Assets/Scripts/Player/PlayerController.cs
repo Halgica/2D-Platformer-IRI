@@ -7,7 +7,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerController : MonoBehaviour
 {
-    public enum AlienState { Idle, Walk, Jump, Fall };
+    public enum AlienState { Idle, Walk, Jump, Fall, Dash };
 
     [SerializeField] private Checkpoint currentCheckPoint;
     [SerializeField] private BoxCollider2D playerBoxCollider;
@@ -18,11 +18,16 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 5f;
+    [SerializeField] private float dashForce = 150f;
     [SerializeField] private LayerMask groundLayer; 
     [SerializeField] private LayerMask deathLayer; 
     private AlienState curState;
     private int STATE_HASH = Animator.StringToHash("State");
     private bool isPaused = false;
+    private bool canDash = true;
+    private bool isDashing = false;
+    private float dashingTime = 0.3f;
+    private float dashingCooldown = 1f;
 
     private Rigidbody2D playerRigidBody;
 
@@ -37,7 +42,12 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if(IsColliding(deathLayer))
+        animator.SetBool("isDashing", isDashing);
+        if (isDashing)
+        {
+            return;
+        }
+        if (IsColliding(deathLayer))
         {
             transform.position = currentCheckPoint.GetSpawnPoint().position;
             Instantiate(sfxAlienDeath, transform.position, Quaternion.identity);
@@ -78,6 +88,11 @@ public class PlayerController : MonoBehaviour
         {
             UIManager.Unpause();
             isPaused = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        {
+            StartCoroutine(Dash());
         }
 
         // State management
@@ -124,6 +139,20 @@ public class PlayerController : MonoBehaviour
     public void DisableMovement()
     {
         this.enabled = false;
+    }
+
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = playerRigidBody.gravityScale;
+        playerRigidBody.gravityScale = 0f;
+        playerRigidBody.velocity = new Vector2(transform.localScale.x * dashForce, 0f);
+        yield return new WaitForSeconds(dashingTime);
+        playerRigidBody.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
     }
 }
 

@@ -12,8 +12,6 @@ public class GameManager : MonoBehaviour
     public string[] sceneNames;
     public int counter;
     [SerializeField] private EnemySpawner spawner;
-    [SerializeField] private GameObject endPointPrefab;
-    private bool hasSpawnedEndpoint = false;
 
     private void Awake()
     {
@@ -25,15 +23,6 @@ public class GameManager : MonoBehaviour
         LoadScene("MainMenu");
     }
 
-    private void Update()
-    {
-        if (EnemySpawner.enemiesKilled == 10 && !hasSpawnedEndpoint)
-        {
-            SpawnEndpoint();
-            hasSpawnedEndpoint=true;
-        }
-    }
-
     public void LoadScene(string sceneName, string unloadSceneName = null)
     {
         if (unloadSceneName != null)
@@ -42,17 +31,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
     }
 
-    private void SpawnEndpoint()
-    {
-        Instantiate(endPointPrefab, new Vector2(6f, -1.5f), Quaternion.identity);
-    }
-
-    public void Quit()
-    {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
-    }
+//    public void Quit()
+//    {
+//#if UNITY_EDITOR
+//        UnityEditor.EditorApplication.isPlaying = false;
+//#else
+//        Application.Quit();
+//#endif
+//    }
 }
